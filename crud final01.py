@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
-from funcoes_crud_gpt import *
+
 
 # criar o engine ou motor de ligação com o sql
 engine = db.create_engine('mysql+pymysql://root:123456@localhost:3306/cadastro')
