@@ -78,8 +78,23 @@ def popula_lista():
         listbox.insert(END, f'{pessoa.id} - {pessoa.Nomes} - {pessoa.Idades}')
 
 
+def explicar_crud():
+    msg = "Bem-vindo ao sistema de cadastro de pessoas!\n\n" \
+          "A lista exibe todas as pessoas cadastradas no sistema.\n\n" \
+          "Para cadastrar uma nova pessoa, preencha o nome e a idade nos campos acima e clique em 'Cadastrar'.\n\n" \
+          "Para atualizar uma pessoa existente, selecione o nome da pessoa na lista, edite os campos de nome e idade e clique em 'Atualizar'.\n\n" \
+          "Para excluir uma pessoa, selecione o nome da pessoa na lista e clique em 'Excluir'.\n\n" \
+
+    messagebox.showinfo("Sobre o CRUD", msg)
+
 root = Tk()
 root.title("Cadastro de Pessoas")
+
+menubar = Menu(root)
+menu_sobre = Menu(menubar, tearoff=0)
+menu_sobre.add_command(label="Explicação", command=explicar_crud)
+menubar.add_cascade(label="Sobre o CRUD", menu=menu_sobre)
+root.config(menu=menubar)
 
 label_nome = Label(root, text="Nome")
 label_nome.grid(row=0, column=0)
