@@ -108,17 +108,21 @@ label_idade.grid(row=1, column=0)
 entry_idade = Entry(root, width=30)
 entry_idade.grid(row=1, column=1)
 
-button_cadastrar = Button(root, text="Cadastrar", command=cadastrar)
-button_cadastrar.grid(row=2, column=0)
+botão_cadastrar = Button(root, text="Cadastrar", command=cadastrar)
+botão_cadastrar.config(background='#00FA9A')
+botão_cadastrar.grid(row=2, column=0)
 
 button_atualizar = Button(root, text="Atualizar", command=atualizar)
+button_atualizar.config(background='#A9A9A9')
 button_atualizar.grid(row=2, column=1)
 
-button_excluir = Button(root, text="Excluir", command=excluir)
-button_excluir.grid(row=2, column=2)
+botão_excluir = Button(root, text="Excluir", command=excluir)
+botão_excluir.config(background='#FF0000')
+botão_excluir.grid(row=2, column=2)
 
 listbox = Listbox(root, height=10, width=50)
 listbox.grid(row=3, column=0, columnspan=3)
+
 
 popula_lista()
 root.mainloop()
