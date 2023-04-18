@@ -1,4 +1,4 @@
-import ex2
+import banco_dados_hortifruti
 
 op = 0
 while op > 0:
